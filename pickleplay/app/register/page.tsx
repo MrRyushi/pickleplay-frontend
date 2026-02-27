@@ -40,7 +40,7 @@ const Register = () => {
     <div className="flex justify-center items-center min-h-screen px-4 md:px-0">
       <div>
         <h1 className="text-4xl font-bold">Register</h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg">
           Create an account to start booking courts and playing pickleball!
         </p>
         <form
@@ -53,7 +53,7 @@ const Register = () => {
           <div>
             <label
               htmlFor="username"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium"
             >
               Username
             </label>
@@ -62,13 +62,13 @@ const Register = () => {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium"
             >
               Email
             </label>
@@ -77,13 +77,13 @@ const Register = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium"
             >
               Password
             </label>
@@ -92,13 +92,13 @@ const Register = () => {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium"
             >
               Confirm Password
             </label>
@@ -107,13 +107,13 @@ const Register = () => {
               id="confirm-password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
             <label
               htmlFor="role"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium "
             >
               Role
             </label>
@@ -123,12 +123,12 @@ const Register = () => {
               </SelectTrigger>
               <SelectContent className="bg-white">
                 <SelectGroup>
-                  <SelectItem value="PLAYER" className="hover:bg-slate-100">
+                  <SelectItem value="PLAYER" className="hover:bg-slate-100 text-black">
                     Player
                   </SelectItem>
                   <SelectItem
                     value="COURT_ADMIN"
-                    className="hover:bg-slate-100"
+                    className="hover:bg-slate-100 text-black"
                   >
                     Court Admin
                   </SelectItem>
@@ -144,7 +144,7 @@ const Register = () => {
           </button>
         </form>
         <div className="mt-4 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm">
             Already have an account?{" "}
             <a href="/login" className="text-blue-500 hover:underline">
               Log in
