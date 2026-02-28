@@ -26,7 +26,7 @@ export async function middleware(req) {
 
 export const config = {
   matcher: [
-    "/courts/:path*",
-    "/landing/:path*",
+    "/openplays/:path*",
+    // "/landing/:path*",
   ],
 };

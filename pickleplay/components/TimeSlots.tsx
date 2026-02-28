@@ -1,9 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-const TimeSlots = ({ selectedDate }: { selectedDate: Date }) => {
+const TimeSlots = ({ selectedDate, selectedSlots, setSelectedSlots }: { selectedDate: Date; selectedSlots: number[]; setSelectedSlots: (slots: number[]) => void }) => {
   const times = Array.from({ length: 18 }, (_, i) => 6 + i); // 6AM → 11PM
-  const [selectedSlots, setSelectedSlots] = useState<number[]>([]);
+
+  useEffect(() => {
+    setSelectedSlots([]);
+  }, [selectedDate, setSelectedSlots]);
 
   const toggleSlot = (hour: number) => {
     if (selectedSlots.length === 0) {
@@ -17,15 +20,16 @@ const TimeSlots = ({ selectedDate }: { selectedDate: Date }) => {
 
     if (hour < min - 1 || hour > max + 1) {
       // Not contiguous, ignore
+      alert("Please select contiguous time slots.");
       return;
     }
 
     if (selectedSlots.includes(hour)) {
       // Deselect from the end
       if (hour === min) {
-        setSelectedSlots(selectedSlots.filter(h => h !== min));
+        setSelectedSlots(selectedSlots.filter((h) => h !== min));
       } else if (hour === max) {
-        setSelectedSlots(selectedSlots.filter(h => h !== max));
+        setSelectedSlots(selectedSlots.filter((h) => h !== max));
       }
       // clicking middle of range does nothing
       return;
@@ -43,7 +47,7 @@ const TimeSlots = ({ selectedDate }: { selectedDate: Date }) => {
 
   return (
     <div className="mt-6 grid grid-cols-3 gap-3">
-      {times.map(hour => {
+      {times.map((hour) => {
         const isSelected = selectedSlots.includes(hour);
         return (
           <button

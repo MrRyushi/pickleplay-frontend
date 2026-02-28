@@ -40,9 +40,9 @@ const DateButtons = ({
 
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center border??????????">
       <div>
-        <button onClick={handleBack} className="px-4 py-2 rounded-md">
+        <button onClick={handleBack} className="md:px-4 py-2 rounded-md">
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       </div>
@@ -68,7 +68,7 @@ const DateButtons = ({
       </div>
 
       <div>
-        <button onClick={handleForward} className="px-4 py-2 rounded-md">
+        <button onClick={handleForward} className="md:px-4 py-2 rounded-md">
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>

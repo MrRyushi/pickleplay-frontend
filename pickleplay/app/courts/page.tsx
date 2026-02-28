@@ -53,7 +53,7 @@ const Courts = () => {
               <h2 className='text-2xl font-semibold'>{court.name}</h2>
               <p className=''>{court.location}</p>
               <p className='font-medium'>Hourly Rate: ₱{court.hourly_rate}</p>
-              <button onClick={() => router.push("/booking")} className='mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'>Check Availability</button>
+              <button onClick={() => router.push(`booking/${court.id}`)} className='mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'>Check Availability</button>
             </li>
           ))}
         </ul>
