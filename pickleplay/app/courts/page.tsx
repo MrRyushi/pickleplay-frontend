@@ -15,13 +15,7 @@ const Courts = () => {
   const [filteredCourts, setFilteredCourts] = useState<Court[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
-  const [token, setToken] = useState<string | null>(null);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setToken(localStorage.getItem("token"));
-  }, []);
-
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) return;

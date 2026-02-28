@@ -3,7 +3,7 @@
 import DateButtons from "@/components/DateButtons";
 import { DatePicker } from "@/components/DatePicker";
 import TimeSlots from "@/components/TimeSlots";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const Booking = () => {
